@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() 
+{
+    int p1, p2, p3;
+    cin >> p1 >> p2 >> p3;
+    
+   int total=p1+p2+p3;
+   if((p1+p2+p3)%2!=0)
+   {
+    cout<<-1<<"\n";
+   }
+   else
+   {
+    cout<<min(total/2,p1+p2)<<"\n";
+   }
+}
+
+int main()
+ {
+    int t;
+    cin >> t;
+    while (t--) 
+    {
+        solve();
+    }
+    return 0;
+}
