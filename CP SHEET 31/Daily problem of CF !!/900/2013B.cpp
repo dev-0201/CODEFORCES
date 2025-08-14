@@ -1,16 +1,13 @@
-#include<bits/stdc++.h>
-using namespace std;
-int main() {
-    long long t,n,a,s;
-    scanf("%lld",&t);
-    while(t--) {
-        s=0;
-        scanf("%lld",&n);
-        while(n--) {
-            scanf("%lld",&a);
-            if(n==1) s-=a;
-            else s+=a;
-        }
-        printf("%lld\n",s);
-    }
+#include <iostream>
+signed main() {
+  int t;
+  std::cin >> t;
+  while(t--){
+    int n;
+    std::cin >> n;
+    long long sum=0, x;
+    for(int i=0;i<n;++i)
+      std::cin >> x, sum += (i==n-2?-x:x);
+    std::cout << sum << '\n';
+  }
 }
